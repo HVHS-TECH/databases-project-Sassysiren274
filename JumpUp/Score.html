@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JUMP UP!!!</title>
+    
+    <!-- p5.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.js"></script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
+    <script src="https://p5play.org/v3/p5play.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-background">
+    <header>
+        <h1>JUMP UP!!</h1>
+     <h2 id="totalScore">Your Total Score</h2> 
+    </header>
+   <script>
+  // Wait until page loads
+  window.onload = function() {
+
+    // Get score (default to 0 if none)
+    let savedScore = localStorage.getItem("score") || 0;
+
+    // This finds the HTML element with the id ‘totalScore’ and changes its text to the score u got.
+    document.getElementById("totalScore").innerText =
+      "Your Total Score: " + savedScore;
+  };
+</script>
+    <div class="container">
+        <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+</body>
+</html>
