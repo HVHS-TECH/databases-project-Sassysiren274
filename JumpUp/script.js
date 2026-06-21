@@ -152,6 +152,7 @@ if (gameOver) {
   if (player.y < 0) {
     gameOver = true;
   }
+  saveScore("Jump Up", score);
 }
 // generate infinity floor and top and bottom walls
 function generateFloor() {

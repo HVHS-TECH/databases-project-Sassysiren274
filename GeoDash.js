@@ -16,6 +16,7 @@ function endGame(_player, _obstacle){
     player.remove();
     obstacles.removeAll();
     // Put your database writes here:
+    saveScore("Geo Dash", score);
 
 }
 const SCREEN_WIDTH = 400;

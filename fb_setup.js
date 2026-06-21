@@ -10,4 +10,19 @@ const firebaseConfig = {
   appId: "1:432351260611:web:b3aee5b5673ff79b3e1776",
   measurementId: "G-WY4KBYKPC4"
 };
+//
+firebase.initializeApp(firebaseConfig);
 
+const db = firebase.database();
+const auth = firebase.auth();
+
+let GLOBAL_user = null;
+
+auth.onAuthStateChanged(function(user){
+    GLOBAL_user = user;
+
+    if(user){
+        document.getElementById("welcomeMessage").innerHTML =
+        "Welcome " + user.displayName;
+    }
+});
