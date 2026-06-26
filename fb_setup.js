@@ -14,12 +14,21 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const auth = firebase.auth();
+
 let GLOBAL_user = null;
+
 auth.onAuthStateChanged(function (user) {
+
     GLOBAL_user = user;
 
     if (user) {
-        document.getElementById("welcomeMessage").innerHTML =
-            "Welcome " + user.displayName;
+        console.log("User logged in:", user);
+        let message =
+            document.getElementById("welcomeMessage");
+
+        if (message) {
+            message.innerHTML =
+                "Welcome " + user.displayName;
+        }
     }
 });

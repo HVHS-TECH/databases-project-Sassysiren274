@@ -1,59 +1,53 @@
-body {
-  background-color: #000000;
-  color: #000000;
-  font-family: Arial, sans-serif;
-  padding: 2rem;
+body{
+margin:0;
+height:100vh;
+background:
+linear-gradient(
+skyblue,
+white
+);
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
 }
-
-.container {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fff0f5;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.page{
+background:white;
+width:600px;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:
+0 10px 30px #555;
 }
-
-h1 {
-  color: pink;
-  font-size: 2.5rem;
-  margin-bottom: 0;
+h1{
+font-size:50px;
+color:#008cff;
+text-shadow:
+3px 3px white;
 }
-
-h2 {
-  color: #8b0000;
-  font-size: 1.2rem;
-  margin-top: 0.2rem;
+button{
+width:300px;
+height:70px;
+margin:15px;
+border:none;
+border-radius:25px;
+background:
+linear-gradient(
+orange,
+#ff6600
+);
+color:white;
+font-size:25px;
+font-weight:bold;
+cursor:pointer;
 }
-
-label {
-  display: block;
-  margin-top: 1rem;
+button:hover{
+transform:scale(1.05);
 }
-
-input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button {
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.2rem;
-  background-color: #0977b2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #548204;
-}
-
-#statusMessage {
-  margin-top: 1rem;
-  font-style: italic;
+input{
+width:80%;
+padding:15px;
+margin:10px;
+border-radius:15px;
 }

@@ -7,46 +7,46 @@
   <title>DataBase Project</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
   <!-- firebase end ******************************************-->
   <script src="fb_setup.js"></script>
   <script src="fb_io.js"></script>
   <script src="script.js"></script>
 </head>
 
-<button onclick="window.location.href='JumpUp/JumpUp.html'">Play Jump Up</button>
-<button onclick="window.location.href='GeoDash.html'">Play Geo Dash</button>
-<button onclick="window.location.href='profile.html'">Your Profile</button>
-
 <body>
-  <div class="container">
-    <h1>DataBase</h1>
-    <h2></h2>
+ <body>
+<div class="arcade">
+<h1>GAMING ARCADE</h1>
+<button onclick="location.href='login.html'">LOGIN</button>
+<div>
+<button onclick="location.href='games.html'">🎮 PLAY</button>
+<button onclick="location.href='profile.html'">👤 PROFILE</button>
+</div>
+<button onclick="location.href='info.html'">ℹ INFO</button>
+</div>
+</body>
+</div>
 
-    <button onclick="fb_authenticate()">Login with Google</button>
-    <p id="welcomeMessage"></p>
-    <form id="Name">
-      <label>
-        First Name:
-      </label>
-      <input type="text" id="firstName">
-      <label>
-        Last Name:
-      </label>
-      <input type="text" id="lastName">
-      <label>
-        Age:
-      </label>
-      <input type="number" id="age">
-    </form>
+</button>
+<p id="statusMessage"></p>
 
-    <button onclick="fb_write()">Submit</button>
+</div>
 
-    <p id="statusMessage"></p>
-  </div>
+<script src="fb_setup.js"></script>
+<script src="fb_io.js"></script>
+<script src="script.js"></script>
+
 </body>
 
+    <button onclick="fb_write()">Submit</button>
+    <p id="statusMessage"></p>
+
+  </div> 
+</body>
 </html>
