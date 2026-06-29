@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
 <div class="page">
 <h1>LOGIN</h1>
 <button onclick="fb_authenticate()">🔵 LOGIN WITH GOOGLE</button>
@@ -10,4 +10,24 @@
 </div>
 <script src="fb_setup.js"></script>
 <script src="fb_io.js"></script>
+</body> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<h1>LOGIN</h1>
+<button onclick="fb_authenticate()">🔵 LOGIN WITH GOOGLE</button>
+<input placeholder="Email">
+<input id="firstName" placeholder="Name">
+<input id="age" placeholder="Age">
+<button onclick="fb_write()">SUBMIT</button>
+<p id="welcomeMessage"></p>
+</div>
+<script src="fb_setup.js"></script>
+<script src="fb_io.js"></script>
 </body>
+</html>

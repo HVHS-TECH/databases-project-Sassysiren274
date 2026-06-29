@@ -1,4 +1,4 @@
-body{
+/* body{
 margin:0;
 height:100vh;
 background:
@@ -50,4 +50,86 @@ width:80%;
 padding:15px;
 margin:10px;
 border-radius:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:white;
+border-radius:20px;
+overflow:hidden;
+}
+th{
+background:#ff9900;
+color:white;
+padding:15px;
+font-size:20px;
+}
+td{
+padding:15px;
+font-size:18px;
+border-bottom:1px solid #ddd;
+}
+tr:hover{
+background:#eee;
+} */
+ body{
+margin:0;
+height:100vh;
+font-family:Arial;
+background:
+linear-gradient(
+skyblue,
+white
+);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.page{
+background:white;
+width:600px;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:
+0 10px 30px gray;
+}
+h1{
+font-size:45px;
+color:#168cff;
+}
+button{
+width:250px;
+height:70px;
+margin:15px;
+border:none;
+border-radius:20px;
+background:
+linear-gradient(
+orange,
+#ff6600
+);
+color:white;
+font-size:22px;
+font-weight:bold;
+}
+button:hover{
+transform:scale(1.05);
+}
+.games{
+display:flex;
+justify-content:center;
+}
+input{
+display:block;
+margin:15px auto;
+width:80%;
+padding:15px;
+border-radius:15px;
+border:2px solid #ddd;
+}
+p{
+font-size:20px;
 }
