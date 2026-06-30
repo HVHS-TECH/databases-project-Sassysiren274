@@ -9,6 +9,7 @@ let vel = 3
 let coins = [];
 let score = 0;
 let gameOver = false;
+let scoresaved = false;
 let bottomWalls = [];
 let topWalls = [];
 let bg;
@@ -124,6 +125,10 @@ if (gameOver) {
   }
   // game over!!!
   if (gameOver) {
+  if(!scoreSaved){
+    saveScore("Jump Up", score);
+    scoreSaved = true;
+  }
     player.vel.x = 0;
     player.vel.y = 0;
 
@@ -139,7 +144,6 @@ if (gameOver) {
     if (kb.presses('r')) {
       location.reload();
     }
-
     return;
   }
   // player colliding with the bottom walland game being over
@@ -152,7 +156,6 @@ if (gameOver) {
   if (player.y < 0) {
     gameOver = true;
   }
-  saveScore("Jump Up", score);
 }
 // generate infinity floor and top and bottom walls
 function generateFloor() {

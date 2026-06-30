@@ -28,7 +28,7 @@ auth.onAuthStateChanged(function (user) {
 
         if (message) {
             message.innerHTML =
-                "Welcome " + user.displayName;
+                "Welcome";
         }
     }
 });

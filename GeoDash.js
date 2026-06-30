@@ -16,8 +16,10 @@ function endGame(_player, _obstacle){
     player.remove();
     obstacles.removeAll();
     // Put your database writes here:
+    if(!scoreSaved){
     saveScore("Geo Dash", score);
-
+    scoreSaved = true;
+}
 }
 const SCREEN_WIDTH = 400;
 const SCREEN_HEIGHT = 200;
@@ -32,6 +34,7 @@ var spawnDist = 0;
 var nextSpawn = 0;
 var score = 0;
 var player;
+var scoresaved = false;
   
 var screenSelector = "start";  
 
