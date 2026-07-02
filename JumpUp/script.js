@@ -9,7 +9,7 @@ let vel = 3
 let coins = [];
 let score = 0;
 let gameOver = false;
-let scoresaved = false;
+let scoreSaved = false;
 let bottomWalls = [];
 let topWalls = [];
 let bg;
@@ -90,56 +90,55 @@ function draw() {
     }
   }
   console.log(coins.length)
- 
+
   // Draw score box (green button style)
-push();
+  push();
 
-// Position (KEEP SAME POSITION — just adjust if needed)
-let x = camera.x - width/2 + 20;
-let y = 20;
+  // Position (KEEP SAME POSITION — just adjust if needed)
+  let x = camera.x - width / 2 + 20;
+  let y = 20;
 
-// Button style
-fill(0, 200, 0); // green color
-stroke(0, 150, 0); // darker green border
-strokeWeight(2);
-rect(x, y, 180, 50, 15); // rounded corners
+  // Button style
+  fill(0, 200, 0); // green color
+  stroke(0, 150, 0); // darker green border
+  strokeWeight(2);
+  rect(x, y, 180, 50, 15); // rounded corners
 
-// Text style
-fill(255); // white text
-noStroke();
-textSize(20);
-textAlign(CENTER, CENTER);
+  // Text style
+  fill(255); // white text
+  noStroke();
+  textSize(20);
+  textAlign(CENTER, CENTER);
 
-// Draw score text
-text("Score: " + score, x + 90, y + 25);
+  // Draw score text
+  text("Score: " + score, x + 90, y + 25);
 
-pop();
+  pop();
 
   // Save score when game ends, even after changing pages.
-if (gameOver) {
-  localStorage.setItem("score", score);
-}
+  if (gameOver) {
+    localStorage.setItem("score", score);
+  }
   // gameover if player hits this specific position
   if (player.y > height + 10) {
     gameOver = true;
   }
   // game over!!!
   if (gameOver) {
-  if(!scoreSaved){
-    saveScore("Jump Up", score);
-    scoreSaved = true;
-  }
+    if (!scoreSaved) {
+      saveScore("Jump Up", score);
+      scoreSaved = true;
+    }
     player.vel.x = 0;
     player.vel.y = 0;
 
     textAlign(CENTER, CENTER);
     textSize(60);
     fill('red');
-    text("GAME OVER", camera.x, height / 2 - 40);
-
+    text("GAME OVER", width / 2, height / 2 - 40);
     fill(255);
     textSize(24);
-    text("Press R to Restart", camera.x, height / 2 + 20);
+    text("Press R to Restart", width / 2, height / 2 + 20);
 
     if (kb.presses('r')) {
       location.reload();
@@ -179,7 +178,7 @@ function generateFloor() {
     topWall.color = 'black';
     topWall.type = 'danger';
     topWalls.push(topWall);
-5
+    5
   }
   lastFloorX += 500 + random(300, 450);
 }

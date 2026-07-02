@@ -136,6 +136,7 @@ function endScreen(){
 }
 
 function resetGame(){
+    scoreSaved = false;
     player = new Sprite(PLAYER_WIDTH*1.2,  SCREEN_HEIGHT/2, PLAYER_WIDTH, PLAYER_HEIGHT, 'd');
     player.color = color("purple");
     player.collides(obstacles, endGame);

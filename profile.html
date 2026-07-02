@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Profile</title>
 <link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
 </head>
+
 <body>
 <div class="page">
-<h1>YOUR PROFILE</h1>
-<div class="tabs">
-<button>Jump Up Stats</button>
-<button>Geo Dash Stats</button>
+<h1>PROFILE</h1>
+<h2 id="playerName"></h2>
+<h2>🎮 Jump Up Scores</h2>
+<table id="jumpTable">
+<tr>
+<th>Player</th>
+<th>Score</th>
+</tr>
+</table>
+<h2>🌍 Geo Dash Scores</h2>
+<table id="geoTable">
+<tr>
+<th>Player</th>
+<th>Score</th>
+</tr>
+</table>
+<button onclick="location.href='index.html'">BACK</button>
 </div>
-<p>High Score:</p>
-<p> Last Score:</p>
-<p>Record:</p>
-<button onclick="location.href='index.html'">⬅ BACK</button>
-</div>
+
+<script src="fb_setup.js"></script>
+<script src="profile.js"></script>
+
 </body>
 </html>
